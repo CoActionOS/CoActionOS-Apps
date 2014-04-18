@@ -1,0 +1,279 @@
+/*
+ * Tetris.cpp
+ *
+ *  Created on: May 2, 2013
+ *      Author: tgil
+ */
+
+#include <unistd.h>
+#include <cstdio>
+#include <applib/Timer.hpp>
+#include "Tetris.hpp"
+
+
+void Tetris::run(void){
+
+	int down_counter;
+
+	if( ctrl == 0 ){
+		//a controller must be specified
+		return;
+	}
+
+	lcd->clear();
+	lcd->setstr("TETRIS!", 10, 50);
+	lcd->refresh();
+
+	//Welcome screen
+	do {
+		ctrl->refresh();
+		Timer::wait_msec(50);
+	} while( !ctrl->isstart() );
+
+	//wait for start to be released
+	do {
+		ctrl->refresh();
+		usleep(50*1000);
+	} while( ctrl->isstart() );
+
+	//Start with a new piece
+	piece.reset();
+	piece.move(0, -4);
+
+	down_counter = 0;
+	do {
+
+		//check for user input
+
+		//remove piece from board because it is about to move
+		setpiece(false);
+
+		ctrl->refresh();
+		if( ctrl->isleft() ){
+			if( !iscollision(-1, 0) ){
+				piece.move(-1, 0);
+			}
+		}
+
+		if( ctrl->isright() ){
+			if( !iscollision(1, 0) ){
+				piece.move(1, 0);
+			}
+		}
+
+		if( ctrl->isA() ){
+			piece.rotate(true);
+			if( iscollision(0, 0) ){
+				piece.rotate(false);
+			}
+		}
+
+		if( ctrl->isB() ){
+			piece.rotate(false);
+			if( iscollision(0, 0) ){
+				piece.rotate(true);
+			}
+		}
+
+		if( ctrl->isstart() ){
+
+			//wait for start to be released
+			do {
+				ctrl->refresh();
+				usleep(50*1000);
+			} while( ctrl->isstart() );
+
+			usleep(100*1000);
+
+			lcd->clear();
+			lcd->setstr("PAUSED", 10, 50);
+			lcd->refresh();
+
+			do {
+				ctrl->refresh();
+				usleep(50*1000);
+			} while( !ctrl->isstart() );
+
+			//wait for start to be released
+			do {
+				ctrl->refresh();
+				usleep(50*1000);
+			} while( ctrl->isstart() );
+
+		}
+
+
+		//check for collision
+		down_counter++;
+		if( ctrl->isdown() ){
+			if( !iscollision(0, -1) ){
+				piece.move(0, -1);
+			} else {
+				setpiece();
+				updatelayout();
+				piece.reset();
+			}
+
+		} else {
+			if( down_counter >= 24 / (level+1) ){
+				down_counter = 0;
+				//move piece down
+				if( !iscollision(0, -1) ){
+					piece.move(0,-1); //move down
+				} else {
+					setpiece();
+					updatelayout();
+					piece.reset();
+				}
+			}
+		}
+		setpiece();
+		draw();
+		usleep(80*1000);
+	} while( !ctrl->isselect() );
+
+	lcd->clear();
+	lcd->refresh();
+}
+
+
+void Tetris::updatelayout(void){
+	int i, j;
+	int k, l;
+	for(j=0; j < ROWS; j++){
+		for(i=0; i < COLUMNS; i++){
+			if( layout[j][i] == false ){
+				break;
+			}
+		}
+		if( i == COLUMNS ){
+			//this is a solid line
+			lines++;
+			if( (lines % 10) == 0 ){
+				level++;
+			}
+			for(l=j; l < ROWS; l++){
+				for(k=0; k < 10; k++){
+					if( l < (ROWS - 1) ){
+						layout[l][k] = layout[l+1][k];
+					} else {
+						layout[l][k] = false;
+					}
+				}
+			}
+			draw();
+			usleep(100*1000);
+			j--; //have j repeat this line since everything moved
+		}
+	}
+}
+
+bool Tetris::iscollision(int dirx, int diry){
+	//check if piece will collide if moved in dirx
+	int i;
+	int x, y;
+	for(i=0; i < 4; i++){
+		x = piece.xpos(i) + dirx;
+		y = piece.ypos(i) + diry;
+
+		if( x< 0 ){
+			return true;
+		}
+
+		if( x >= COLUMNS ){
+			return true;
+		}
+
+
+		if ( y < 0 ){
+			return true;
+		}
+
+		if( y >= ROWS ){
+			return true;
+		}
+
+		//does it collide with anything in the layout
+		if( layout[y][x] == true ){
+			if( y >= (ROWS - 3) ){
+				lcd->clear();
+				lcd->setstr("GAME OVER!!!", 0, 50);
+				lcd->refresh();
+			}
+
+			return true;
+		}
+
+	}
+
+	return false;
+
+}
+
+void Tetris::setpiece(bool enabled){
+	int i;
+	int x, y;
+	for(i=0; i < 4; i++){
+		x = piece.xpos(i);
+		y = piece.ypos(i);
+		if ( x < 0 ){
+			printf("X < 0 error!\n");
+			exit(1);
+		}
+
+		if ( x >= COLUMNS ){
+			printf("X > 9 error!\n");
+			exit(1);
+		}
+
+		if ( y < 0 ){
+			printf("Y < 0 error!\n");
+			exit(1);
+		}
+
+		if ( y >= ROWS ){
+			printf("Y > 22 error!\n");
+			exit(1);
+		}
+
+		layout[piece.ypos(i)][piece.xpos(i)] = enabled;
+	}
+}
+
+void Tetris::draw(void){
+	int i, j;
+	char buffer[16];
+	lcd->clear();
+	for(i=0; i < 10; i++){
+		for(j=0; j < 20; j++){
+			if( layout[j][i] == true ){
+				drawblock(j, i);
+			}
+		}
+	}
+
+
+	//draw the decoration
+	lcd->sethline(x_min-1, y_min-1, x_max - x_min + 3);
+	lcd->setvline(x_max+1, y_min, y_max - y_min + 1);
+	lcd->setvline(x_min-1, y_min, y_max - y_min + 1);
+
+	sprintf(buffer, "%d : %d", level, lines);
+	lcd->setstr(buffer, x_min + 2, y_min-9);
+
+
+	lcd->refresh();
+}
+
+void Tetris::drawblock(int r, int c){
+	int x,y;
+	int i,j;
+	x = c*bwidth + x_min;
+	y = r*bwidth + y_min;
+	for(i=0; i < bwidth; i++){
+		for(j=0; j < bwidth; j++){
+			lcd->setpixel(x+i, y+j);
+		}
+	}
+
+}
