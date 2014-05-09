@@ -28,7 +28,7 @@ bool SPause::action(void){
 }
 
 State * SPause::exit_condition(State * slist[]){
-	State * next;
+	State * next = 0;
 	return next;
 }
 

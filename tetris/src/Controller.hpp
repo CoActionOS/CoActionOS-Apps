@@ -14,6 +14,8 @@
 class Controller {
 public:
 
+	static void init(void);
+
 	static MLcd & lcd(){ return lcd_; }
 	static Dpad & dpad(){ return dpad_; }
 

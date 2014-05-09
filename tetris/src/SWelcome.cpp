@@ -18,10 +18,19 @@ const char * SWelcome::name(){
 }
 
 bool SWelcome::entry_action(void){
+	printf("Enter Welcome\n");
+
 	lcd().hold();
+
+	printf("Hold LCD\n");
 	//for now just draw a line
 	lcd().line(0, 0, lcd().xmax(), lcd().ymax());
+
+	printf("release LCD\n");
 	lcd().release();
+
+	printf("Release LCD\n");
+
 	return true;
 }
 
