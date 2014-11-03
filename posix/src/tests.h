@@ -8,6 +8,8 @@
 #ifndef TESTS_H_
 #define TESTS_H_
 
+#include <trace.h>
+
 int aio_test(void);
 int listio_test(void);
 int dirent_test(void);
@@ -61,6 +63,12 @@ void test_passed(void);
 void test_intro(const char * func_name, const char * condition, const char * args);
 int test_errno(int ret, const char * expected_errno, int exp_errno);
 int test_success(int ret);
+
+int launch_test(void);
+
+extern char trace_buffer[32];
+#define TRACE_MESSAGE(X) do { strncpy(trace_buffer, X, 32); posix_trace_event(POSIX_TRACE_MESSAGE, trace_buffer, strlen(trace_buffer)); } while(0)
+#define TRACE_VALUE(X,Y) do { sprintf(trace_buffer, "%s-%d", X, Y); posix_trace_event(POSIX_TRACE_MESSAGE, trace_buffer, strlen(trace_buffer)); } while(0)
 
 
 #endif /* TESTS_H_ */

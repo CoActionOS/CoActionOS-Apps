@@ -9,12 +9,13 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <limits.h>
+#include <trace.h>
 
 #include "tests.h"
 
 #define LARGE_THREADS_TOTAL 4
-#define SMALL_THREADS_TOTAL (CHILD_MAX - 3)
-#define JOINED_THREADS_TOTAL (CHILD_MAX - 3)
+#define SMALL_THREADS_TOTAL (CHILD_MAX/2)
+#define JOINED_THREADS_TOTAL (CHILD_MAX/2)
 
 static void * t0(void * args);
 static void * t1(void * args);
@@ -64,7 +65,7 @@ int pthread_test(void){
 			}
 		}
 
-		if ( pthread_attr_setstacksize(&pattr, 1024) < 0 ){
+		if ( pthread_attr_setstacksize(&pattr, 2048) < 0 ){
 			fflush(stdout);
 			perror("setstacksize failed");
 			return -1;
@@ -122,6 +123,7 @@ int pthread_test(void){
 			return -1;
 		}
 	}
+
 
 	if ( pthread_join(t, NULL) < 0 ){
 		fflush(stdout);

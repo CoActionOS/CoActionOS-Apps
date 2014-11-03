@@ -25,7 +25,7 @@ int unistd_sleep_test(void){
 
 	if ( SLEEP_TEST ){
 		failed = false;
-		for(i=1; i < 10; i+= 1){
+		for(i=1; i < 4; i+= 1){
 			printf("Test sleep(%d)...", i);
 			fflush(stdout);
 			tmp = sleep_test_case(i);

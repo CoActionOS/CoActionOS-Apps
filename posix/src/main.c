@@ -9,9 +9,10 @@
 #define FILE_TEST 1
 #define SLEEP_TEST 1
 
+char trace_buffer[32];
+
 
 int main(int argc, char * argv[]){
-
 
 
 	if( stdio_test() < 0 ){
@@ -46,13 +47,10 @@ int main(int argc, char * argv[]){
 		return -1;
 	}
 
-
 	if ( num_test() < 0 ){
 		printf("NUM Test Failed\n");
 		return -1;
 	}
-
-
 
 	if ( sched_test() < 0 ){
 		printf("SCHED Test Failed\n");
@@ -63,7 +61,6 @@ int main(int argc, char * argv[]){
 		printf("PTHREAD Test Failed\n");
 		return -1;
 	}
-
 
 
 	if ( DIRECTORY_TEST ){
@@ -92,8 +89,15 @@ int main(int argc, char * argv[]){
 		}
 	}
 
+
 	if ( signal_master_test() < 0 ){
 		printf("SIGNAL Master Test Failed\n");
+		return -1;
+	}
+
+
+	if( launch_test() < 0 ){
+		printf("LAUNCH Test Failed\n");
 		return -1;
 	}
 

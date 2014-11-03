@@ -59,7 +59,7 @@ int main(int argc, char * argv[]){
 		ret = vcp.read(buffer, 256);
 		if( ret > 0 ){
 			uart.write(buffer, ret); //output data on the UART
-			vcp.write(buffer, ret); //echo if you like
+			//vcp.write(buffer, ret); //echo if you like
 		}
 
 		//see if there is data waiting on the UART

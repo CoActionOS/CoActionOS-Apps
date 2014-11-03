@@ -1,0 +1,342 @@
+Archive member included because of file (symbol)
+
+/usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+                              src/main.o (Timer::wait_msec(unsigned long))
+/usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                              src/main.o (Pio::open(int))
+/usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                              src/main.o (Periph::readline(char*, int, int, char))
+/usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+                              /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o) (Phy::Phy())
+/usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_symbols.o)
+                              /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o) (__cxa_pure_virtual)
+/usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+                              (crt)
+/usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_common.o)
+                              /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o) (crt_common)
+
+Discarded input sections
+
+ .group         0x0000000000000000        0x8 src/main.o
+ .text          0x0000000000000000        0x0 src/main.o
+ .data          0x0000000000000000        0x0 src/main.o
+ .bss           0x0000000000000000        0x0 src/main.o
+ .text          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .data          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .bss           0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5TimerC2Ev
+                0x0000000000000000       0x10 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer15settimeout_usecEm
+                0x0000000000000000       0x54 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer15settimeout_msecEm
+                0x0000000000000000       0x58 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer14settimeout_secEm
+                0x0000000000000000       0x50 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer10clock_usecEv
+                0x0000000000000000       0x2c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer10clock_msecEv
+                0x0000000000000000       0x30 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer9clock_secEv
+                0x0000000000000000       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer9isexpiredEv
+                0x0000000000000000       0x30 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer8wait_secEm
+                0x0000000000000000        0xc /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer9wait_usecEm
+                0x0000000000000000        0xc /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer5startEv
+                0x0000000000000000       0x18 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer9isrunningEv
+                0x0000000000000000        0xc /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer3secEv
+                0x0000000000000000       0x2c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer4msecEv
+                0x0000000000000000       0x6c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer4usecEv
+                0x0000000000000000       0x68 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer5valueEv
+                0x0000000000000000        0xc /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .text._ZN5Timer4stopEv
+                0x0000000000000000       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .group         0x0000000000000000        0x8 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .text          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .data          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .text._ZN3Pio7getattrEP10pio_attr_t
+                0x0000000000000000       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .text._ZN3Pio9setactionEPK13hwpl_action_t
+                0x0000000000000000       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .text._ZN3Pio3getEv
+                0x0000000000000000       0x10 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .text._ZN3Pio3setEj
+                0x0000000000000000       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .group         0x0000000000000000        0x8 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .text          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .data          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .bss           0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .text._ZN6Periph4seekEii
+                0x0000000000000000       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .text._ZN6Periph4readEiPvi
+                0x0000000000000000       0x2c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .text._ZN6Periph5writeEiPKvi
+                0x0000000000000000       0x2c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .group         0x0000000000000000        0x8 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+ .text          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+ .data          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+ .bss           0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+ .text          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_symbols.o)
+ .data          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_symbols.o)
+ .bss           0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_symbols.o)
+ .ARM.attributes
+                0x0000000000000000       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_symbols.o)
+ .text          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+ .data          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+ .bss           0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+ .text          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_common.o)
+ .data          0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_common.o)
+ .bss           0x0000000000000000        0x0 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_common.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x00000000de000000 0x0000000000800000
+ram              0x00000000de800000 0x00000000007f8000
+kernel           0x00000000deff8000 0x0000000000008000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000001000                _app_ram_size = 0x1000
+                0x0000000000008000                __ram_size__ = 0x8000
+                0x0000000000000000                . = 0x0
+
+.text           0x00000000de000000      0x600
+                0x00000000de000000                _text = .
+ *(.startup)
+ .startup       0x00000000de000000       0x3c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+                0x00000000de000000                startup_data
+ *(.text)
+ *(.init)
+ *(.fini)
+ *(.eh_frame)
+                0x00000000de00003c                _ctors = .
+ *(.init_array)
+ *(.ctors)
+                0x00000000de00003c                _dtors = .
+ *(.dtors)
+ *(.fini_array)
+                0x00000000de00003c                _dtors_end = .
+ *(.jcr)
+ *(.rodata)
+ *fill*         0x00000000de00003c        0x4 
+ .rodata        0x00000000de000040       0x30 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                0x00000000de000040                vtable for Pio
+ .rodata        0x00000000de000070       0x30 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de000070                vtable for Periph
+ *(.rodata*)
+ .rodata._ZTV3Pin
+                0x00000000de0000a0       0x30 src/main.o
+                0x00000000de0000a0                vtable for Pin
+ .rodata.str1.1
+                0x00000000de0000d0        0x4 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .rodata.str1.1
+                0x00000000de0000d4        0x6 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ *fill*         0x00000000de0000da        0x6 
+ .rodata._ZTV3Phy
+                0x00000000de0000e0       0x10 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+                0x00000000de0000e0                vtable for Phy
+ .rodata.str1.1
+                0x00000000de0000f0        0x2 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+ *(.glue_7)
+ .glue_7        0x0000000000000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+ *(.text.*)
+ *fill*         0x00000000de0000f2        0x2 
+ .text.startup.main
+                0x00000000de0000f4       0x74 src/main.o
+                0x00000000de0000f4                main
+ .text._ZN5Timer9wait_msecEm
+                0x00000000de000168       0x34 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+                0x00000000de000168                Timer::wait_msec(unsigned long)
+ .text._ZN3Pio4openEi
+                0x00000000de00019c       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                0x00000000de00019c                Pio::open(int)
+ .text._ZN3Phy5ioctlEii
+                0x00000000de0001b0        0xa /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                0x00000000de0001b0                Phy::ioctl(int, int)
+ *fill*         0x00000000de0001ba        0x2 
+ .text._ZN3PioC2Ej
+                0x00000000de0001bc       0x28 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                0x00000000de0001bc                Pio::Pio(unsigned int)
+                0x00000000de0001bc                Pio::Pio(unsigned int)
+ .text._ZN3Pio7setattrEPK10pio_attr_t
+                0x00000000de0001e4       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                0x00000000de0001e4                Pio::setattr(pio_attr_t const*)
+ .text._ZN3Pio7setmaskEj
+                0x00000000de0001f8       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                0x00000000de0001f8                Pio::setmask(unsigned int)
+ .text._ZN3Pio7clrmaskEj
+                0x00000000de00020c       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                0x00000000de00020c                Pio::clrmask(unsigned int)
+ .text._ZN6Periph4openEi
+                0x00000000de000220        0x6 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de000220                Periph::open(int)
+ *fill*         0x00000000de000226        0x2 
+ .text._ZN6Periph8readlineEPciic
+                0x00000000de000228       0x54 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de000228                Periph::readline(char*, int, int, char)
+ .text._ZN6Periph5ioctlEiPv
+                0x00000000de00027c       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de00027c                Periph::ioctl(int, void*)
+ .text._ZN6Periph5writeER3Aio
+                0x00000000de000290       0x18 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de000290                Periph::write(Aio&)
+ .text._ZN6Periph4readER3Aio
+                0x00000000de0002a8       0x18 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de0002a8                Periph::read(Aio&)
+ .text._ZN6Periph5writeEPKvi
+                0x00000000de0002c0       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de0002c0                Periph::write(void const*, int)
+ .text._ZN6Periph4readEPvi
+                0x00000000de0002d4       0x14 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de0002d4                Periph::read(void*, int)
+ .text._ZN6Periph5closeEv
+                0x00000000de0002e8       0x2c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de0002e8                Periph::close()
+ .text._ZN6Periph4openEPKci
+                0x00000000de000314       0x3c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de000314                Periph::open(char const*, int)
+ .text._ZN6PeriphC2EjiPiPb
+                0x00000000de000350       0x48 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de000350                Periph::Periph(unsigned int, int, int*, bool*)
+                0x00000000de000350                Periph::Periph(unsigned int, int, int*, bool*)
+ .text._ZN6Periph5_openEPKci
+                0x00000000de000398       0x8c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+                0x00000000de000398                Periph::_open(char const*, int)
+ .text._ZN3PhyC2Ev
+                0x00000000de000424        0xc /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+                0x00000000de000424                Phy::Phy()
+                0x00000000de000424                Phy::Phy()
+ .text.crt      0x00000000de000430       0x3c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+                0x00000000de000430                crt
+ .text.crt_common
+                0x00000000de00046c      0x160 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_common.o)
+                0x00000000de00046c                crt_common
+ FILL mask 0xff
+                0x00000000de0005cc                _text_size_align = .
+                0x00000000de000600                . = ALIGN (0x200)
+ *fill*         0x00000000de0005cc       0x34 ff
+                0x00000000de000600                . = ALIGN ((0x400 * (_text_size_align > 0x1000)))
+                0x00000000de000600                . = ALIGN ((0x800 * (_text_size_align > 0x2000)))
+                0x00000000de000600                . = ALIGN ((0x1000 * (_text_size_align > 0x4000)))
+                0x00000000de000600                . = ALIGN ((0x2000 * (_text_size_align > 0x8000)))
+                0x00000000de000600                . = ALIGN ((0x4000 * (_text_size_align > 0x10000)))
+                0x00000000de000600                . = ALIGN ((0x8000 * (_text_size_align > 0x20000)))
+                0x00000000de000600                . = ALIGN ((0x10000 * (_text_size_align > 0x40000)))
+
+.vfp11_veneer   0x00000000de000600        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x00000000de000600        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x00000000de000600        0x0
+ .iplt          0x0000000000000000        0x0 src/main.o
+
+.rel.dyn        0x00000000de000600        0x0
+ .rel.iplt      0x0000000000000000        0x0 src/main.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00000000de000600                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00000000de000600                __exidx_end = .
+                0x00000000de000600                _etext = .
+
+.data           0x00000000de800000       0x80 load address 0x00000000de000600
+                0x00000000de800000                _data = .
+                0x00000000de000600                __data_beg_src__ = _etext
+ *(.global_reent)
+ .global_reent  0x00000000de800000       0x80 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+                0x00000000de800000                global_impure_data
+ *(.data)
+ *(.data.*)
+                0x00000000de800080                _edata = .
+                0x00000000de800080                _bss = .
+
+.igot.plt       0x00000000de800080        0x0 load address 0x00000000de000680
+ .igot.plt      0x0000000000000000        0x0 src/main.o
+
+.bss            0x00000000de800080       0x1c load address 0x00000000de000680
+ *(.bss)
+ .bss           0x00000000de800080       0x1c /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+                0x00000000de800080                Pio::fd
+                0x00000000de800098                Pio::isinitialized
+ *(.bss.*)
+                0x00000000de80009c                . = ALIGN (0x4)
+                0x00000000de80009c                _ebss = .
+                0x0000000000000600                PROVIDE (_text_size, (_etext - _text))
+                0x0000000000000080                PROVIDE (_data_size, (_edata - _data))
+                0x0000000000000000                PROVIDE (_ctors_size, ((_dtors - _ctors) >> 0x2))
+                0x0000000000000000                PROVIDE (_dtors_size, ((_dtors_end - _dtors) >> 0x2))
+LOAD src/main.o
+LOAD /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a
+LOAD /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_opus_arm.a
+LOAD /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_AES_arm.a
+LOAD /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a
+OUTPUT(sandbox.elf elf32-littlearm)
+
+.debug_info     0x0000000000000000      0xce9
+ .debug_info    0x0000000000000000      0xce9 src/main.o
+
+.debug_abbrev   0x0000000000000000      0x33c
+ .debug_abbrev  0x0000000000000000      0x33c src/main.o
+
+.debug_loc      0x0000000000000000      0x2b1
+ .debug_loc     0x0000000000000000      0x2b1 src/main.o
+
+.debug_aranges  0x0000000000000000       0x20
+ .debug_aranges
+                0x0000000000000000       0x20 src/main.o
+
+.debug_ranges   0x0000000000000000       0x58
+ .debug_ranges  0x0000000000000000       0x58 src/main.o
+
+.debug_line     0x0000000000000000      0x3a0
+ .debug_line    0x0000000000000000      0x3a0 src/main.o
+
+.debug_str      0x0000000000000000      0x41c
+ .debug_str     0x0000000000000000      0x41c src/main.o
+                                        0x484 (size before relaxing)
+
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x11 src/main.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .comment       0x0000000000000000       0x12 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .comment       0x0000000000000000       0x12 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .comment       0x0000000000000000       0x12 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+ .comment       0x0000000000000000       0x12 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+ .comment       0x0000000000000000       0x12 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_common.o)
+
+.ARM.attributes
+                0x0000000000000000       0x33
+ .ARM.attributes
+                0x0000000000000000       0x33 src/main.o
+ .ARM.attributes
+                0x0000000000000033       0x33 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Timer.o)
+ .ARM.attributes
+                0x0000000000000066       0x33 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Pio.o)
+ .ARM.attributes
+                0x0000000000000099       0x33 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Periph.o)
+ .ARM.attributes
+                0x00000000000000cc       0x33 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libapp_CoActionOS_lpc177x_8x.a(Phy.o)
+ .ARM.attributes
+                0x00000000000000ff       0x33 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt.o)
+ .ARM.attributes
+                0x0000000000000132       0x33 /usr/local/CoActionOS/lib/gcc/arm-cm3-eabi/4.7.3/../../../../arm-cm3-eabi/lib/libcrt.a(crt_common.o)
+
+.debug_frame    0x0000000000000000       0x2c
+ .debug_frame   0x0000000000000000       0x2c src/main.o

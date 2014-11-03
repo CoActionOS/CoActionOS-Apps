@@ -41,6 +41,7 @@ int mqueue_test(void){
 	}
 	printf("passed\n");
 
+	/*
 	attr.mq_maxmsg = 8;
 	attr.mq_msgsize = 32000000;
 
@@ -52,6 +53,7 @@ int mqueue_test(void){
 		return -1;
 	}
 	printf("passed\n");
+	*/
 
 	printf("Test mq_open() ENAMETOOLONG...");
 	errno = 0;
@@ -114,7 +116,7 @@ int mqueue_test(void){
 	printf("Test mq_open() O_CREAT...");
 	errno = 0;
 	mqdes = mq_open(VALID_QUEUE, O_CREAT|O_EXCL|O_RDWR, 0666, &attr);
-	if( mqdes < -1 ){
+	if( mqdes == (ssize_t)-1 ){
 		fflush(stdout);
 		perror("failed");
 		return -1;

@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   1024	    128	      0	   1152	    480	./sandbox.elf

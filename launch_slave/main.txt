@@ -1,0 +1,120 @@
+#include <cstdio>
+
+#include <unistd.h>
+#include <dev/disk.h>
+#include <errno.h>
+
+#include <applib/Device.hpp>
+#include <applib/Timer.hpp>
+
+
+char to_ascii(unsigned char c){
+	if((c  >= 32)  && (c <= 126)){
+		return c;
+	}
+
+	return '.';
+}
+
+
+int main(int argc, char * argv[]){
+	disk_attr_t attr;
+	char buffer[512];
+	int i;
+	int ret;
+	disk_erase_block_t deb;
+
+	Device disk1;
+
+	if( disk1.open("/dev/disk1") < 0 ){
+		perror("failed to open disk1");
+	}
+
+	printf("file no is %d\n", disk1.fileno());
+
+	printf("done\n");
+
+	//fd = disk1.fileno();
+
+	printf("init\n");
+
+	/*
+	if( (ret = ioctl(fd, I_DISK_INIT)) < 0 ){
+		perror("failed to init");
+		printf("return %d\n", ret);
+		return 0;
+	} else {
+		printf("init success\n");
+	}
+	*/
+
+	if( (ret = disk1.ioctl(I_DISK_INIT)) < 0 ){
+		perror("failed to init");
+		printf("return %d\n", ret);
+		return 0;
+	} else {
+		printf("init success\n");
+	}
+
+
+	//printf("getattr %d\n", fd);
+	//Timer::wait_msec(100);
+	if( (ret = disk1.ioctl(I_DISK_GETATTR, &attr)) < 0 ){
+		perror("failed to get attr");
+		printf("return %d\n", ret);
+		return 0;
+	}
+
+
+	//erase page 9
+	deb.start = 9;
+	deb.end = 9;
+	if( disk1.ioctl(I_DISK_ERASEBLOCKS, &deb) < 0 ){
+		perror("Failed to erase block 9");
+	} else {
+		printf("erase successful\n");
+		while( disk1.ioctl(I_DISK_BUSY) != 0 ){
+			printf("busy\n");
+			Timer::wait_msec(10);
+		}
+	}
+
+	for(i=0; i < 512; i++){
+		buffer[i] = i;
+	}
+
+	if( disk1.write(9, buffer, 512) <  0 ){
+		perror("Failed to write");
+		return 0;
+	}
+
+	while( disk1.ioctl(I_DISK_BUSY) != 0 ){
+		printf("busy write\n");
+		Timer::wait_msec(10);
+	}
+
+	for(int j=0; j < 10; j++){
+
+		printf("Read disk %d\n", j);
+		memset(buffer, 0, 512);
+		if( (ret = disk1.read(j, buffer, 512)) != 512 ){
+			perror("failed to read device");
+			printf("return %d\n", ret);
+		} else {
+			printf("Read successful %d\n", j);
+			for(i=0; i < 512; i++){
+				if( buffer[i] != 0 ){
+					printf("data[%d] = 0x%X %c\n", i, buffer[i], to_ascii(buffer[i]));
+				}
+				if( j == 9 ){
+					if( buffer[i] != (i & 0xFF) ){
+						printf("MISMATCH\n");
+					}
+				}
+			}
+		}
+	}
+
+	return 0;
+}
+
