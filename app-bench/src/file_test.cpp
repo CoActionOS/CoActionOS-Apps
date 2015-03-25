@@ -39,7 +39,7 @@ int create_test(void){
 	StringSmall str = "test\n";
 
 	//start with a clean slate
-	File::remove("/media/create_test.txt");
+	File::remove("/home/create_test.txt");
 
 	t.start("file:create");
 
@@ -48,8 +48,8 @@ int create_test(void){
 	t.update();
 
 
-	if( f.create("/media/create_test.txt") < 0 ){
-		t.failed("failed to create /media/create_test.txt");
+	if( f.create("/home/create_test.txt") < 0 ){
+		t.failed("failed to create /home/create_test.txt");
 		return -1;
 	}
 
@@ -63,14 +63,14 @@ int create_test(void){
 	t.update();
 
 	if( f.close() < 0 ){
-		t.failed("failed to close /media/create_test.txt");
+		t.failed("failed to close /home/create_test.txt");
 		return -1;
 	}
 
 	t.update();
 
 	//test create with no overwrite
-	if( f.create("/media/create_test.txt", false) < 0 ){
+	if( f.create("/home/create_test.txt", false) < 0 ){
 		t.failed("failed no overwrite open");
 		return -1;
 	}
@@ -92,7 +92,7 @@ int create_test(void){
 
 	t.update();
 
-	if( f.create("/media/create_test.txt", true) < 0 ){
+	if( f.create("/home/create_test.txt", true) < 0 ){
 		t.failed("failed to overwrite existing file");
 		perror("failed to overwrite");
 		return -1;
@@ -109,15 +109,15 @@ int create_test(void){
 	t.update();
 
 	if( f.close() < 0 ){
-		t.failed("failed to close overwritten /media/create_test.txt");
+		t.failed("failed to close overwritten /home/create_test.txt");
 		return -1;
 	}
 
 	//todo add permissions tests
 
 	t.update();
-	if( File::remove("/media/create_test.txt") < 0 ){
-		t.failed("failed to remove /media/create_test.txt");
+	if( File::remove("/home/create_test.txt") < 0 ){
+		t.failed("failed to remove /home/create_test.txt");
 		return -1;
 	}
 
@@ -136,21 +136,21 @@ int open_test(void){
 
 	t.update();
 
-	if( f.create("/media/open_test.txt") < 0 ){
-		t.failed("failed to create /media/open_test.txt");
+	if( f.create("/home/open_test.txt") < 0 ){
+		t.failed("failed to create /home/open_test.txt");
 		return -1;
 	}
 
 	t.update();
 
 	if( f.close() < 0 ){
-		t.failed("failed to close /media/open_test.txt");
+		t.failed("failed to close /home/open_test.txt");
 		return -1;
 	}
 
 	t.update();
 
-	if( f.open("/media/open_test.txt", File::RDONLY) < 0 ){
+	if( f.open("/home/open_test.txt", File::RDONLY) < 0 ){
 		t.failed("failed to open read only");
 		return -1;
 	}

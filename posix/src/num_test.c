@@ -164,7 +164,7 @@ int float_test(void){
 
 	y = x / 5.0;
 	printf("test /...");
-	if( round(y*10.0) == (8.0) ) printf("passed\n");
+	if( roundf(y*10.0) == (8.0) ) printf("passed\n");
 	else {
 		printf("failed\n");
 		return -1;

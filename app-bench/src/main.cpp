@@ -8,6 +8,7 @@
 
 int main(int argc, char * argv[]){
 
+	/*
 	if( file_test() < 0 ){
 		printf("File test failed\n");
 		return 1;
@@ -22,7 +23,12 @@ int main(int argc, char * argv[]){
 		printf("Xml test failed\n");
 		return 1;
 	}
+	*/
 
+	if( settings_test() < 0 ){
+		printf("Settings test failed\n");
+		return 1;
+	}
 
 	return 0;
 }

@@ -4,15 +4,15 @@
 		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187" moduleId="org.eclipse.cdt.core.settings" name="Release">
 				<macros>
-					<stringMacro name="POSTPROCESS_win64" type="VALUE_TEXT" value="${POSTPROCESS_win32}"/>
-					<stringMacro name="HOST" type="VALUE_TEXT" value="arm-cm3-eabi"/>
 					<stringMacro name="TOOLSPATH_win64" type="VALUE_TEXT" value="${TOOLSPATH_win32}"/>
+					<stringMacro name="HOST" type="VALUE_TEXT" value="arm-cm3-eabi"/>
+					<stringMacro name="POSTPROCESS_win64" type="VALUE_TEXT" value="${POSTPROCESS_win32}"/>
 					<stringMacro name="TOOLSPATH_win32" type="VALUE_TEXT" value="C:\CoActionOS-Compiler\CoActionOS\bin"/>
 					<stringMacro name="POSTPROCESS_macosx" type="VALUE_TEXT" value="sh ../script/post-process.sh"/>
 					<stringMacro name="ARCH" type="VALUE_TEXT" value="lpc17xx"/>
 					<stringMacro name="RAM_SIZE" type="VALUE_TEXT" value="4096"/>
-					<stringMacro name="RM_win32" type="VALUE_TEXT" value="../script/clean.bat"/>
 					<stringMacro name="POSTPROCESS" type="VALUE_TEXT" value="${POSTPROCESS_${OsType}}"/>
+					<stringMacro name="RM_win32" type="VALUE_TEXT" value="../script/clean.bat"/>
 					<stringMacro name="POSTPROCESS_win32" type="VALUE_TEXT" value="../script/post-process.bat"/>
 					<stringMacro name="TOOLSPATH" type="VALUE_TEXT" value="${TOOLSPATH_${OsType}}"/>
 					<stringMacro name="RM" type="VALUE_TEXT" value="${RM_${OsType}}"/>
@@ -59,8 +59,6 @@
 								<option id="gnu.cpp.link.option.nostdlibs.1851377052" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" value="true" valueType="boolean"/>
 								<option id="gnu.cpp.link.option.libs.1424286330" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="app_CoActionOS_${ARCH}"/>
-									<listOptionValue builtIn="false" value="app_opus_arm"/>
-									<listOptionValue builtIn="false" value="app_AES_arm"/>
 									<listOptionValue builtIn="false" value="crt"/>
 								</option>
 								<option id="gnu.cpp.link.option.flags.1464609774" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-Wl,-Map,${ProjName}.map,--defsym=_app_ram_size=${RAM_SIZE},--gc,-Tldscripts/app.ld -u crt" valueType="string"/>

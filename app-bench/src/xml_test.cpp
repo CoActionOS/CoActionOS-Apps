@@ -37,7 +37,7 @@ int value_test(){
 	str.setformat(String::DECIMAL, 8);
 
 	t.start("open (readonly)");
-	if( xml.init("/media/xml_test.xml", Xml::READONLY) < 0 ){ t.failed("failed"); return -1; }
+	if( xml.init("/home/xml_test.xml", Xml::READONLY) < 0 ){ t.failed("failed"); return -1; }
 	t.passed();
 
 	t.start("empty value");
@@ -110,7 +110,7 @@ int value_test(){
 	t.passed();
 
 	t.start("close readonly"); if( xml.close() < 0 ){ t.failed("failed"); return -1; } t.passed();
-	t.start("open readwrite"); if( xml.init("/media/xml_test.xml", Xml::READWRITE) < 0 ){ t.failed("failed"); return -1; } t.passed();
+	t.start("open readwrite"); if( xml.init("/home/xml_test.xml", Xml::READWRITE) < 0 ){ t.failed("failed"); return -1; } t.passed();
 
 	t.start("set value");
 	for(i=0; i < 10; i++){
@@ -133,7 +133,7 @@ int value_test(){
 	t.start("close (readwrite)"); if( xml.close() < 0 ){ t.failed("failed"); return -1; } t.passed();
 
 	t.start("open (readonly)");
-	if( xml.init("/media/xml_test.xml", Xml::READONLY) < 0 ){ t.failed("failed"); return -1; }
+	if( xml.init("/home/xml_test.xml", Xml::READONLY) < 0 ){ t.failed("failed"); return -1; }
 	t.passed();
 
 	t.start("find value array");
@@ -175,9 +175,9 @@ int create_test_file(){
 
 	t.start("create test file");
 
-	Xml::remove("/media/xml_test.xml");
+	Xml::remove("/home/xml_test.xml");
 
-	if( xml.init("/media/xml_test.xml", Xml::WRITEONLY) < 0 ){
+	if( xml.init("/home/xml_test.xml", Xml::WRITEONLY) < 0 ){
 		t.failed("failed to create test file");
 		perror("failed to open");
 		return -1;
